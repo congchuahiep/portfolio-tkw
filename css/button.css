@@ -1,0 +1,8 @@
+.button {
+	background-color: var(--primary);
+	display: flex;
+	width: 220px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+}
