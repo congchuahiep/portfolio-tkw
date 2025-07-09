@@ -5,4 +5,15 @@
 	height: 40px;
 	justify-content: center;
 	align-items: center;
+    border-radius: 4px;
+}
+
+.button:hover {
+	background-color: var(--primary);
+	display: flex;
+	width: 220px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+    border-radius: 4px;
 }

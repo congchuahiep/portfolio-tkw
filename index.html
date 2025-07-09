@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/progress-bar.css">
   <link rel="stylesheet" type="text/css" href="css/button.css">
+  <link rel="stylesheet" type="text/css" href="css/hero.css">
 
   <style>
     :root {
@@ -38,13 +39,36 @@
       font-size: 13px;
     }
 
+    h1 {
+      font-style: normal;
+      margin: 0;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 126%;
+    }
+
     h4 {
-      color: var(--foreground);
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
       margin: 0;
+    }
+
+    h6 {
+      color: var(--Paragraph-Font, #767676);
+      font-kerning: none;
+      font-feature-settings: 'calt' off;
+
+      /* H6 - 16px */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      /* 150% */
+      text-transform: capitalize;
     }
 
     hr {
@@ -62,6 +86,9 @@
       background-color: var(--surface);
     }
 
+    .absolute {
+      position: absolute;
+    }
 
     .my-12 {
       margin: 12px auto;
@@ -81,6 +108,14 @@
 
     .mb-8 {
       margin-bottom: 8px;
+    }
+
+    .p-48 {
+      padding: 48px;
+    }
+
+    .pt-80 {
+      padding-top: 80px;
     }
 
     .flex {
@@ -128,6 +163,10 @@
       font-weight: 600;
     }
 
+    .text-primary {
+      color: var(--primary)
+    }
+
     .text-secondary {
       color: var(--secondary-foreground);
     }
@@ -168,190 +207,210 @@
   <div class="flex">
 
     <!-- LEFT BAR -->
-    <div class="leftbar">
-      <div class="leftbar-item">
-        <img class="avatar-container mt-12" src="assets/avatar.jpg" alt="a guy">
-        <h4 class="mt-12">Trần Hoàng Hiệp</h4>
-        <p class="text-secondary mb-8">Front-End developer</p>
+    <div class="leftbar"">
+      <div class=" leftbar-item">
+      <img class="avatar-container mt-12" src="assets/avatar.jpg" alt="a guy">
+      <h4 class="mt-12">Trần Hoàng Hiệp</h4>
+      <p class="text-secondary mb-8">Front-End developer</p>
 
-        <!-- Social icon -->
-        <div class="flex justify-center gap-4">
-          <img src="assets/icon/facebook.svg" class="icon-badge">
-          <img src="assets/icon/instagram.svg" class="icon-badge">
-          <img src="assets/icon/twitter.svg" class="icon-badge">
-          <img src="assets/icon/Icons-Youtube.svg" class="icon-badge">
-        </div>
-
-        <hr>
-
-        <!-- Info section -->
-        <div class="flex flex-column gap-4">
-          <div class="flex flex-between">
-            <p class="badge">Age:</p>
-            <p>21</p>
-          </div>
-          <div class="flex flex-between">
-            <p class="badge">Residence:</p>
-            <p>HCM</p>
-          </div>
-          <div class="flex flex-between">
-            <p class="badge">Freelance:</p>
-            <p class="text-success">Avalible</p>
-          </div>
-          <div class="flex flex-between">
-            <p class="badge">Address:</p>
-            <p>Tan Thuan, District 7</p>
-          </div>
-        </div>
-
-        <hr>
-
-        <!-- Language -->
-        <div class="flex flex-column gap-4">
-          <h4 class="text-left mb-8">
-            Languages
-          </h4>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>Vietnamese</p>
-              <p>100%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--100"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>English</p>
-              <p>80%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--80"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>France</p>
-              <p>25%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--25"></div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-
-        <!-- Skills -->
-        <div class="flex flex-column gap-4">
-          <h4 class="text-left mb-8">
-            Skills
-          </h4>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>JavaScript</p>
-              <p>90%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--90"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>React JS</p>
-              <p>80%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--80"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>Rust</p>
-              <p>75%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--75"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>Tailwind CSS</p>
-              <p>75%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--75"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-between text-secondary">
-              <p>React Native</p>
-              <p>50%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar--50"></div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-
-        <!-- Extra Skills -->
-        <div class="flex flex-column gap-4">
-          <h4 class="text-left mb-8">
-            Extra Skills
-          </h4>
-
-          <div>
-            <div class="flex text-secondary">
-              <img src="assets/icon/boxes.svg" class="icon mr-8">
-              <p>Backend developer</p>
-            </div>
-
-            <div class="flex text-secondary">
-              <img src="assets/icon/boxes.svg" class="icon mr-8">
-              <p>Web Assembly</p>
-            </div>
-
-            <div class="flex text-secondary">
-              <img src="assets/icon/boxes.svg" class="icon mr-8">
-              <p>Stylus, Sass, Less</p>
-            </div>
-
-            <div class="flex text-secondary">
-              <img src="assets/icon/boxes.svg" class="icon mr-8">
-              <p>GIT Knowledge</p>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-
-        <div class="button font-bold">
-          DOWNLOAD CV
-          <img src="assets/icon/download.svg" class="icon ml-8">
-        </div>
-
-
+      <!-- Social icon -->
+      <div class="flex justify-center gap-4">
+        <img src="assets/icon/facebook.svg" class="icon-badge">
+        <img src="assets/icon/instagram.svg" class="icon-badge">
+        <img src="assets/icon/twitter.svg" class="icon-badge">
+        <img src="assets/icon/Icons-Youtube.svg" class="icon-badge">
       </div>
+
+      <hr>
+
+      <!-- Info section -->
+      <div class="flex flex-column gap-4">
+        <div class="flex flex-between">
+          <p class="badge">Age:</p>
+          <p>21</p>
+        </div>
+        <div class="flex flex-between">
+          <p class="badge">Residence:</p>
+          <p>HCM</p>
+        </div>
+        <div class="flex flex-between">
+          <p class="badge">Freelance:</p>
+          <p class="text-success">Avalible</p>
+        </div>
+        <div class="flex flex-between">
+          <p class="badge">Address:</p>
+          <p>Tan Thuan, District 7</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Language -->
+      <div class="flex flex-column gap-4">
+        <h4 class="text-left mb-8">
+          Languages
+        </h4>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>Vietnamese</p>
+            <p>100%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--100"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>English</p>
+            <p>80%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--80"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>France</p>
+            <p>25%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--25"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Skills -->
+      <div class="flex flex-column gap-4">
+        <h4 class="text-left mb-8">
+          Skills
+        </h4>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>JavaScript</p>
+            <p>90%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--90"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>React JS</p>
+            <p>80%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--80"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>Rust</p>
+            <p>75%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--75"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>Tailwind CSS</p>
+            <p>75%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--75"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-between text-secondary">
+            <p>React Native</p>
+            <p>50%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar--50"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Extra Skills -->
+      <div class="flex flex-column gap-4">
+        <h4 class="text-left mb-8">
+          Extra Skills
+        </h4>
+
+        <div>
+          <div class="flex text-secondary">
+            <img src="assets/icon/boxes.svg" class="icon mr-8">
+            <p>Backend developer</p>
+          </div>
+
+          <div class="flex text-secondary">
+            <img src="assets/icon/boxes.svg" class="icon mr-8">
+            <p>Web Assembly</p>
+          </div>
+
+          <div class="flex text-secondary">
+            <img src="assets/icon/boxes.svg" class="icon mr-8">
+            <p>Stylus, Sass, Less</p>
+          </div>
+
+          <div class="flex text-secondary">
+            <img src="assets/icon/boxes.svg" class="icon mr-8">
+            <p>GIT Knowledge</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="button font-bold">
+        DOWNLOAD CV
+        <img src="assets/icon/download.svg" class="icon ml-8">
+      </div>
+
+
     </div>
+  </div>
 
-    <!-- MAIN TOPIC -->
-    <div class="flex-grow">
+  <!-- MAIN TOPIC -->
+  <div class="flex-grow">
+    <div class="hero">
+      <div class="p-48 pt-80">
+        <h1>
+          I'm Trần Hoàng Hiệp
+          <br>
+          <span class="text-primary">Front-End</span> Developer
+        </h1>
+        <h6>
+          Ối zồi ôi ối zồi ôi <br>
+          Trình là gì mà là trình ai chấm <br>
+          Anh chỉ biết làm ba mẹ tự hào <br>
+          Xây căn nhà thật to <br>
+          Ở một mình 2 tấm <br>
+        </h6>
 
-      
+        <div class="button">
+          HIRE ME
+        </div>
+      </div>
+
+      <img src="assets/hero-image.png" class="absolute" style="right: 24px; bottom: 0;">
     </div>
+  </div>
 
-    <!-- RIGHT BAR -->
-    <div class="grid-item">Item 3</div>
+  <!-- RIGHT BAR -->
+  <div class="grid-item">Item 3</div>
   </div>
 </body>
 
